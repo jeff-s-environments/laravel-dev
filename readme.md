@@ -1,14 +1,9 @@
-# Laravel Docker Environment
+<h1 align="center">Laravel Dev</h1>
 
-- git clone
-- `cp .env.example .env`
-- Fill out `.env` fields:
-    - `DB_DATABASE`
-    - `DB_USERNAME`
-    - `DB_PASSWORD`
-- `docker-compose up --build -d`
-- `docker-compose exec app composer install`
-- `docker-compose exec app php artisan key:generate`
-- `docker-compose exec app php artisan migrate`
-- `http://localhost` = App
-- `http://localhost:8080` = Adminer (Database GUI)
+Useful commands:
+
+- `docker-compose exec app php artisan` = PHP Artisan commands
+- `docker-compose exec app php artisan migrate` = Run migrations
+- `docker-compose exec app php artisan migrate:refresh` = Roll back and rerun migrations
+- `docker-compose exec app php artisan migrate --seed` = Run migrations and seeders
+- `composer dump-autoload` = When adding new files, run this after
