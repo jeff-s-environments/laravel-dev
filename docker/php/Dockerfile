@@ -1,4 +1,4 @@
-FROM php:7.3-fpm-alpine
+FROM php:8.2-fpm-alpine
 
 # Setup postgres
 RUN set -ex \
@@ -10,4 +10,4 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer --version
 
 # Install extensions
-RUN docker-php-ext-install mbstring tokenizer pdo_pgsql
+RUN docker-php-ext-install pdo_pgsql
