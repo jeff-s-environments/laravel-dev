@@ -64,3 +64,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Development Environment
+
+1. `docker-compose up`
+2. `composer install` in the php container (may need to run `composer clearcache` and rerun if any errors show up)
+3. `php artisan key:generate` in the php container
+4. Restart all containers to get Laravel to recognise the generated key
+5. `http:localhost` (if any errors pop up, proceed to google and diagnose as needed)
